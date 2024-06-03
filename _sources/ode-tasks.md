@@ -32,19 +32,15 @@ Abstracting, simplifying and standardizing works when invoking, saving and dispa
 ````
 
 ### Dispatch UseCase
-````{tab} Python
-  ```python
-  def main():
-      return
-  ```
-  ````
-  ````{tab} C++
-  ```c++
-  int main(const int argc, const char **argv) {
-    return 0;
-  }
-  ```
-  ````
+````{tab-set}
+```{tab-item} Tab 1 title
+My first tab
+```
+
+```{tab-item} Tab 2 title
+My second tab with `some code`!
+```
+````
 
 ### Dispatch Chain UseCase
 ````{tab-set}
