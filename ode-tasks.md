@@ -9,72 +9,61 @@ Abstracting, simplifying and standardizing works when invoking, saving and dispa
 - **Dispatch Sequence UseCase**: Dispatch a list of UseCase<P, R> that are independent of each other.
 
 ### Guard of UseCase
-`````{tab} Python
+````{tab} Python
   ```python
-  print("Hello World!")
+  def main():
+      return
   ```
   ````
-
   ````{tab} C++
   ```c++
-  #include <iostream>
-
-  int main() {
-    std::cout << "Hello World!" << std::endl;
+  int main(const int argc, const char **argv) {
+    return 0;
   }
   ```
   ````
-`````
 
 ### Dispatch UseCase
-`````{tab} Python
+````{tab} Python
   ```python
-  print("Hello World!")
+  def main():
+      return
   ```
   ````
-
   ````{tab} C++
   ```c++
-  #include <iostream>
-
-  int main() {
-    std::cout << "Hello World!" << std::endl;
+  int main(const int argc, const char **argv) {
+    return 0;
   }
   ```
   ````
-`````
 
 ### Dispatch Chain UseCase
-`````{tab} Python
+````{tab} Python
   ```python
-  print("Hello World!")
+  def main():
+      return
   ```
   ````
-
   ````{tab} C++
   ```c++
-  #include <iostream>
-
-  int main() {
-    std::cout << "Hello World!" << std::endl;
+  int main(const int argc, const char **argv) {
+    return 0;
   }
   ```
-`````
+  ````
 
 ### Dispatch Sequence UseCase
-`````{tab} Python
+````{tab} Python
   ```python
-  print("Hello World!")
+  def main():
+      return
   ```
   ````
-
   ````{tab} C++
   ```c++
-  #include <iostream>
-
-  int main() {
-    std::cout << "Hello World!" << std::endl;
+  int main(const int argc, const char **argv) {
+    return 0;
   }
   ```
   ````
-`````
