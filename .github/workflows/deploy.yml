@@ -1,5 +1,9 @@
 name: deploy-book
 
+permissions:
+  contents: write
+  pages: write 
+  
 # Only run this when the master branch changes
 on:
   push:
