@@ -1,23 +1,6 @@
-# Welcome to your Jupyter Book
+# ODE Documentation
 
-dar dar
+**Welcome to ODE Documentation: Your solution for developing high-quality software efficiently and organized.**
 
-````{tab-set}
-```{tab-item} Tab 1 title
-My first tab
-```
-
-```{tab-item} Tab 2 title
-My second tab with `some code`!
-```
-````
-
-This is a small sample book to give you a feel for how book content is
-structured.
-It shows off a few of the major file types, as well as some sample content.
-It does not go in-depth into any particular topic - check out [the Jupyter Book documentation](https://jupyterbook.org) for more information.
-
-Check out the content pages bundled with this sample book to see more.
-
-```{tableofcontents}
-```
+## FAQs and Support
+Have questions? Find answers in our frequently asked questions section. If you need additional support or guidance, reach out to our [dedicated support team](mailto:v2.softwarehouse@gmail.com), ready to assist you on your journey.
