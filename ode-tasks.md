@@ -33,12 +33,8 @@ Abstracting, simplifying and standardizing works when invoking, saving and dispa
 
 ### Dispatch UseCase
 ````{tab-set}
-```{tab-item} Tab 1 title
-My first tab
-```
-
-```{tab-item} Tab 2 title
-My second tab with `some code`!
+```{tab-item} Python
+`some Python code`
 ```
 ````
 
