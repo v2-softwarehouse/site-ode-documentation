@@ -434,17 +434,20 @@ C#</label><div class="sd-tab-content docutils">
 <input checked="checked" id="sd-tab-item-5" name="sd-tab-set-1" type="radio">
 </input><label class="sd-tab-label" for="sd-tab-item-5">
 Python</label><div class="sd-tab-content docutils">
-<p>class GETAPIUseCase(UseCase[string, Any]):
+<p>`
+class GETAPIUseCase(UseCase[string, Any]):
 def <strong>init</strong>(self, repo: UseCaseRepository):
 self.repo = repo</p>
 <p>def execute(self, param: string) -&gt; Output[Any]:
 fetch = self.repo.do_fetch(param)
-return ValueOutput(fetch)</p>
+return ValueOutput(fetch)
+`</p>
 </div>
 <input id="sd-tab-item-6" name="sd-tab-set-1" type="radio">
 </input><label class="sd-tab-label" for="sd-tab-item-6">
 Swift</label><div class="sd-tab-content docutils">
-<p>class GETUseCase : UseCase {
+<p>`
+class GETUseCase : UseCase {
 var repo: UseCaseRepository</p>
 <p>init(repo: UseCaseRepository) {
 self.repo = repo
@@ -453,12 +456,14 @@ self.repo = repo
 let fetch = repo.doFetch(name: param)
 return ValueOutput(value: fetch)
 }
-}</p>
+}
+`</p>
 </div>
 <input id="sd-tab-item-7" name="sd-tab-set-1" type="radio">
 </input><label class="sd-tab-label" for="sd-tab-item-7">
 TypeScript</label><div class="sd-tab-content docutils">
-<p>class GETUseCase extends UseCase {
+<p>`
+class GETUseCase extends UseCase {
 private repo: UseCaseRepository;</p>
 <div class="highlight-none notranslate"><div class="highlight"><pre><span></span>constructor(repo: UseCaseRepository) {
     super();
@@ -471,23 +476,27 @@ execute(param: string | null): Output {
 }
 </pre></div>
 </div>
-<p>}</p>
+<p>}
+`</p>
 </div>
 <input id="sd-tab-item-8" name="sd-tab-set-1" type="radio">
 </input><label class="sd-tab-label" for="sd-tab-item-8">
 Kotlin</label><div class="sd-tab-content docutils">
-<p>class GETUseCase(private val repo: UseCaseRepository)
+<p>`
+class GETUseCase(private val repo: UseCaseRepository)
 : UseCase() {</p>
 <p>override fun execute(param: String?): Output {
 val fetch = repo.doFetch(param)
 return ValueOutput(fetch)
 }
-}</p>
+}
+`</p>
 </div>
 <input id="sd-tab-item-9" name="sd-tab-set-1" type="radio">
 </input><label class="sd-tab-label" for="sd-tab-item-9">
 C#</label><div class="sd-tab-content docutils">
-<p>public class GETUseCase : UseCase
+<p>`
+public class GETUseCase : UseCase
 {
 UseCaseRepository repo { get; set; }</p>
 <p>public UnitGET(UseCaseRepository repo) : base() {
@@ -498,7 +507,8 @@ this.repo = repo;
 var fetch = repo.doFetch();
 return new ValueOutput(fetch);
 }
-}</p>
+}
+`</p>
 </div>
 </div>
 </section>

@@ -33,7 +33,9 @@ Abstracting, simplifying and standardizing works when invoking, saving and dispa
 
 ### Dispatch UseCase
 ````{tab-set}
+
 ```{tab-item} Python
+`
 class GETAPIUseCase(UseCase[string, Any]):
   def __init__(self, repo: UseCaseRepository):
     self.repo = repo
@@ -41,9 +43,11 @@ class GETAPIUseCase(UseCase[string, Any]):
   def execute(self, param: string) -> Output[Any]:
     fetch = self.repo.do_fetch(param)
     return ValueOutput(fetch)
+`
 ```
 
 ```{tab-item} Swift
+`
 class GETUseCase : UseCase {
   var repo: UseCaseRepository
 
@@ -56,9 +60,11 @@ class GETUseCase : UseCase {
       return ValueOutput(value: fetch)
   }
 }
+`
 ```
 
 ```{tab-item} TypeScript
+`
 class GETUseCase extends UseCase {
     private repo: UseCaseRepository;
 
@@ -72,9 +78,11 @@ class GETUseCase extends UseCase {
         return new ValueOutput(fetch);
     }
 }
+`
 ```
 
 ```{tab-item} Kotlin
+`
 class GETUseCase(private val repo: UseCaseRepository) 
 : UseCase() {
 
@@ -83,9 +91,11 @@ class GETUseCase(private val repo: UseCaseRepository)
       return ValueOutput(fetch)
   }
 }
+`
 ```
 
 ```{tab-item} C#
+`
 public class GETUseCase : UseCase
 {
   UseCaseRepository repo { get; set; }
@@ -100,6 +110,7 @@ public class GETUseCase : UseCase
       return new ValueOutput(fetch);
   }
 }
+`
 ```
 ````
 
