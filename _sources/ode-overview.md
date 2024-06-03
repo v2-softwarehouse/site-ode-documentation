@@ -1,11 +1,3 @@
----
-title: Getting OverView
-# tags: 
-#  - jekyll
-#  - github
-description: Getting started with ODE
----
-
 {% include alert.html type="info" content="Easy synchronization. Ode can be found on major platforms pypi, cocoapods, maven central and Microsoft Nuget." %}
 
 # Getting Started
