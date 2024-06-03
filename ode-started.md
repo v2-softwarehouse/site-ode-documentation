@@ -5,15 +5,15 @@ Dependency by artifacts natives to the linguages
 
 ````{tab-set}
 ```{tab-item} Python - pypi
-//TODO
+pip install python-ode
 ```
 
 ```{tab-item} Swift - cocoapods
-//TODO
+pod 'SwiftOde'
 ```
 
 ```{tab-item} TypeScript - npmjs
-//TODO
+npm i typescript-ode
 ```
 
 ```{tab-item} Kotlin - MVN

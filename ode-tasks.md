@@ -34,23 +34,72 @@ Abstracting, simplifying and standardizing works when invoking, saving and dispa
 ### Dispatch UseCase
 ````{tab-set}
 ```{tab-item} Python
-//TODO
+class GETAPIUseCase(UseCase[string, Any]):
+  def __init__(self, repo: UseCaseRepository):
+    self.repo = repo
+
+  def execute(self, param: string) -> Output[Any]:
+    fetch = self.repo.do_fetch(param)
+    return ValueOutput(fetch)
 ```
 
 ```{tab-item} Swift
-//TODO
+class GETUseCase : UseCase {
+  var repo: UseCaseRepository
+
+  init(repo: UseCaseRepository) {
+      self.repo = repo
+  }
+
+  override func execute(param: String?) -> Output {
+      let fetch = repo.doFetch(name: param)
+      return ValueOutput(value: fetch)
+  }
+}
 ```
 
 ```{tab-item} TypeScript
-//TODO
+class GETUseCase extends UseCase {
+    private repo: UseCaseRepository;
+
+    constructor(repo: UseCaseRepository) {
+        super();
+        this.repo = repo;
+    }
+
+    execute(param: string | null): Output {
+        const fetch = this.repo.doFetch(param);
+        return new ValueOutput(fetch);
+    }
+}
 ```
 
 ```{tab-item} Kotlin
-//TODO
+class GETUseCase(private val repo: UseCaseRepository) 
+: UseCase() {
+
+  override fun execute(param: String?): Output {
+      val fetch = repo.doFetch(param)
+      return ValueOutput(fetch)
+  }
+}
 ```
 
 ```{tab-item} C#
-//TODO
+public class GETUseCase : UseCase
+{
+  UseCaseRepository repo { get; set; }
+
+  public UnitGET(UseCaseRepository repo) : base() {
+      this.repo = repo;
+  }
+
+  public override Output execute(string param)
+  {
+      var fetch = repo.doFetch();
+      return new ValueOutput(fetch);
+  }
+}
 ```
 ````
 
