@@ -33,94 +33,37 @@ Abstracting, simplifying and standardizing works when invoking, saving and dispa
 
 ### Dispatch UseCase
 ````{tab-set}
+
 ```{tab-item} Python
-
 ```python
-class GETAPIUseCase(UseCase[string, Any]):
-  def __init__(self, repo: UseCaseRepository):
-    self.repo = repo
-
-  def execute(self, param: string) -> Output[Any]:
-    fetch = self.repo.do_fetch(param)
-    return ValueOutput(fetch)
+//TODO
 ```
-
 ```
 
 ```{tab-item} Swift
-
-```swift
-class GETUseCase : UseCase {
-  var repo: UseCaseRepository
-
-  init(repo: UseCaseRepository) {
-      self.repo = repo
-  }
-
-  override func execute(param: String?) -> Output {
-      let fetch = repo.doFetch(name: param)
-      return ValueOutput(value: fetch)
-  }
-}
+```python
+//TODO
 ```
-
 ```
 
 ```{tab-item} TypeScript
-
-```javascript
-class GETUseCase extends UseCase {
-    private repo: UseCaseRepository;
-
-    constructor(repo: UseCaseRepository) {
-        super();
-        this.repo = repo;
-    }
-
-    execute(param: string | null): Output {
-        const fetch = this.repo.doFetch(param);
-        return new ValueOutput(fetch);
-    }
-}
+```python
+//TODO
 ```
-
 ```
 
 ```{tab-item} Kotlin
-
-```kotlin
-class GETUseCase(private val repo: UseCaseRepository) 
-: UseCase() {
-
-  override fun execute(param: String?): Output {
-      val fetch = repo.doFetch(param)
-      return ValueOutput(fetch)
-  }
-}
+```python
+//TODO
 ```
-
 ```
 
 ```{tab-item} C#
-
-```csharp
-public class GETUseCase : UseCase
-{
-  UseCaseRepository repo { get; set; }
-
-  public UnitGET(UseCaseRepository repo) : base() {
-      this.repo = repo;
-  }
-
-  public override Output execute(string param)
-  {
-      var fetch = repo.doFetch();
-      return new ValueOutput(fetch);
-  }
-}
+```python
+//TODO
+```
 ```
 
-```
 ````
 
 ### Dispatch Chain UseCase
