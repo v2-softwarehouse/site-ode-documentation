@@ -4,7 +4,8 @@
 format: jb-book
 root: intro
 chapters:
+- file: ode-started
+- file: ode-examples
 - file: ode-overview
 - file: ode-concepts
-- file: ode-started
 - file: ode-tasks

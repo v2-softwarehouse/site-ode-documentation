@@ -4,8 +4,27 @@
 
 # Examples
 
-##### Sample backend using Django.
-##### Sample app native using Jetpack.
-##### Sample app native using Core OS.
-##### Sample backend using SpringBoot.
-##### Sample backend using .NET.
+````{tab-set}
+```{tab-item} Python with DJango
+//TODO
+```
+
+```{tab-item} Swift with OSCore
+//TODO
+```
+
+```{tab-item} TypeScript with Vue
+//TODO
+```
+
+```{tab-item} Kotlin with Jetpack
+//TODO
+```
+```{tab-item} Kotlin with SpringBoot
+//TODO
+```
+
+```{tab-item} C# with .NETCore
+//TODO
+```
+````
