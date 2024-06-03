@@ -2,6 +2,7 @@
 
 {% include alert.html type="info" title="Available in" content="All examples are available at https://github.com/v2-softwarehouse" %} -->
 
+# Examples
 
 ##### Sample backend using Django.
 ##### Sample app native using Jetpack.
