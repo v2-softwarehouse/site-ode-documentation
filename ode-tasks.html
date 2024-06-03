@@ -430,90 +430,39 @@ C#</label><div class="sd-tab-content docutils">
 </section>
 <section id="dispatch-usecase">
 <h3>Dispatch UseCase<a class="headerlink" href="#dispatch-usecase" title="Permalink to this heading">#</a></h3>
+</section>
+<section id="dispatch-chain-usecase">
+<h3>Dispatch Chain UseCase<a class="headerlink" href="#dispatch-chain-usecase" title="Permalink to this heading">#</a></h3>
 <div class="sd-tab-set docutils">
 <input checked="checked" id="sd-tab-item-5" name="sd-tab-set-1" type="radio">
 </input><label class="sd-tab-label" for="sd-tab-item-5">
 Python</label><div class="sd-tab-content docutils">
-<p>`
-class GETAPIUseCase(UseCase[string, Any]):
-def <strong>init</strong>(self, repo: UseCaseRepository):
-self.repo = repo</p>
-<p>def execute(self, param: string) -&gt; Output[Any]:
-fetch = self.repo.do_fetch(param)
-return ValueOutput(fetch)
-`</p>
+<p>//TODO</p>
 </div>
 <input id="sd-tab-item-6" name="sd-tab-set-1" type="radio">
 </input><label class="sd-tab-label" for="sd-tab-item-6">
 Swift</label><div class="sd-tab-content docutils">
-<p>`
-class GETUseCase : UseCase {
-var repo: UseCaseRepository</p>
-<p>init(repo: UseCaseRepository) {
-self.repo = repo
-}</p>
-<p>override func execute(param: String?) -&gt; Output {
-let fetch = repo.doFetch(name: param)
-return ValueOutput(value: fetch)
-}
-}
-`</p>
+<p>//TODO</p>
 </div>
 <input id="sd-tab-item-7" name="sd-tab-set-1" type="radio">
 </input><label class="sd-tab-label" for="sd-tab-item-7">
 TypeScript</label><div class="sd-tab-content docutils">
-<p>`
-class GETUseCase extends UseCase {
-private repo: UseCaseRepository;</p>
-<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>constructor(repo: UseCaseRepository) {
-    super();
-    this.repo = repo;
-}
-
-execute(param: string | null): Output {
-    const fetch = this.repo.doFetch(param);
-    return new ValueOutput(fetch);
-}
-</pre></div>
-</div>
-<p>}
-`</p>
+<p>//TODO</p>
 </div>
 <input id="sd-tab-item-8" name="sd-tab-set-1" type="radio">
 </input><label class="sd-tab-label" for="sd-tab-item-8">
 Kotlin</label><div class="sd-tab-content docutils">
-<p>`
-class GETUseCase(private val repo: UseCaseRepository)
-: UseCase() {</p>
-<p>override fun execute(param: String?): Output {
-val fetch = repo.doFetch(param)
-return ValueOutput(fetch)
-}
-}
-`</p>
+<p>//TODO</p>
 </div>
 <input id="sd-tab-item-9" name="sd-tab-set-1" type="radio">
 </input><label class="sd-tab-label" for="sd-tab-item-9">
 C#</label><div class="sd-tab-content docutils">
-<p>`
-public class GETUseCase : UseCase
-{
-UseCaseRepository repo { get; set; }</p>
-<p>public UnitGET(UseCaseRepository repo) : base() {
-this.repo = repo;
-}</p>
-<p>public override Output execute(string param)
-{
-var fetch = repo.doFetch();
-return new ValueOutput(fetch);
-}
-}
-`</p>
+<p>//TODO</p>
 </div>
 </div>
 </section>
-<section id="dispatch-chain-usecase">
-<h3>Dispatch Chain UseCase<a class="headerlink" href="#dispatch-chain-usecase" title="Permalink to this heading">#</a></h3>
+<section id="dispatch-sequence-usecase">
+<h3>Dispatch Sequence UseCase<a class="headerlink" href="#dispatch-sequence-usecase" title="Permalink to this heading">#</a></h3>
 <div class="sd-tab-set docutils">
 <input checked="checked" id="sd-tab-item-10" name="sd-tab-set-2" type="radio">
 </input><label class="sd-tab-label" for="sd-tab-item-10">
@@ -537,36 +486,6 @@ Kotlin</label><div class="sd-tab-content docutils">
 </div>
 <input id="sd-tab-item-14" name="sd-tab-set-2" type="radio">
 </input><label class="sd-tab-label" for="sd-tab-item-14">
-C#</label><div class="sd-tab-content docutils">
-<p>//TODO</p>
-</div>
-</div>
-</section>
-<section id="dispatch-sequence-usecase">
-<h3>Dispatch Sequence UseCase<a class="headerlink" href="#dispatch-sequence-usecase" title="Permalink to this heading">#</a></h3>
-<div class="sd-tab-set docutils">
-<input checked="checked" id="sd-tab-item-15" name="sd-tab-set-3" type="radio">
-</input><label class="sd-tab-label" for="sd-tab-item-15">
-Python</label><div class="sd-tab-content docutils">
-<p>//TODO</p>
-</div>
-<input id="sd-tab-item-16" name="sd-tab-set-3" type="radio">
-</input><label class="sd-tab-label" for="sd-tab-item-16">
-Swift</label><div class="sd-tab-content docutils">
-<p>//TODO</p>
-</div>
-<input id="sd-tab-item-17" name="sd-tab-set-3" type="radio">
-</input><label class="sd-tab-label" for="sd-tab-item-17">
-TypeScript</label><div class="sd-tab-content docutils">
-<p>//TODO</p>
-</div>
-<input id="sd-tab-item-18" name="sd-tab-set-3" type="radio">
-</input><label class="sd-tab-label" for="sd-tab-item-18">
-Kotlin</label><div class="sd-tab-content docutils">
-<p>//TODO</p>
-</div>
-<input id="sd-tab-item-19" name="sd-tab-set-3" type="radio">
-</input><label class="sd-tab-label" for="sd-tab-item-19">
 C#</label><div class="sd-tab-content docutils">
 <p>//TODO</p>
 </div>
