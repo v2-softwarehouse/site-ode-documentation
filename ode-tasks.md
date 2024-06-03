@@ -9,35 +9,6 @@ Abstracting, simplifying and standardizing works when invoking, saving and dispa
 - **Dispatch Sequence UseCase**: Dispatch a list of UseCase<P, R> that are independent of each other.
 
 ### Guard of UseCase
-````{tab-set}
-```{tab-item} Python
-//TODO
-```
-
-```{tab-item} Swift
-//TODO
-```
-
-```{tab-item} TypeScript
-//TODO
-```
-
-```{tab-item} Kotlin
-//TODO
-```
-
-```{tab-item} C#
-//TODO
-```
-````
-
-### Dispatch UseCase
-````{tab-set}
-```{tab-item} Python
-`some Python code`
-```
-````
-
 ````{tab} Python
   ```python
   print("Hello World!")
@@ -53,50 +24,58 @@ Abstracting, simplifying and standardizing works when invoking, saving and dispa
   }
   ```
   ````
-  `````
+````
+
+### Dispatch UseCase
+````{tab} Python
+  ```python
+  print("Hello World!")
+  ```
+  ````
+
+  ````{tab} C++
+  ```c++
+  #include <iostream>
+
+  int main() {
+    std::cout << "Hello World!" << std::endl;
+  }
+  ```
+  ````
+`````
 
 ### Dispatch Chain UseCase
-````{tab-set}
-```{tab-item} Python
-//TODO
-```
+````{tab} Python
+  ```python
+  print("Hello World!")
+  ```
+  ````
 
-```{tab-item} Swift
-//TODO
-```
+  ````{tab} C++
+  ```c++
+  #include <iostream>
 
-```{tab-item} TypeScript
-//TODO
-```
-
-```{tab-item} Kotlin
-//TODO
-```
-
-```{tab-item} C#
-//TODO
-```
-````
+  int main() {
+    std::cout << "Hello World!" << std::endl;
+  }
+  ```
+  ````
+`````
 
 ### Dispatch Sequence UseCase
-````{tab-set}
-```{tab-item} Python
-//TODO
-```
+````{tab} Python
+  ```python
+  print("Hello World!")
+  ```
+  ````
 
-```{tab-item} Swift
-//TODO
-```
+  ````{tab} C++
+  ```c++
+  #include <iostream>
 
-```{tab-item} TypeScript
-//TODO
-```
-
-```{tab-item} Kotlin
-//TODO
-```
-
-```{tab-item} C#
-//TODO
-```
-````
+  int main() {
+    std::cout << "Hello World!" << std::endl;
+  }
+  ```
+  ````
+`````
