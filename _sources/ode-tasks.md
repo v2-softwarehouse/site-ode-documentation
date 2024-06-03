@@ -10,92 +10,92 @@ Abstracting, simplifying and standardizing works when invoking, saving and dispa
 
 ### Guard of UseCase
 ````{tab-set}
-```{tab-item} Python with DJango
+```{tab-item} Python
 //TODO
 ```
 
-```{tab-item} Swift with OSCore
+```{tab-item} Swift
 //TODO
 ```
 
-```{tab-item} TypeScript with Vue
+```{tab-item} TypeScript
 //TODO
 ```
 
-```{tab-item} Kotlin with Jetpack
+```{tab-item} Kotlin
 //TODO
 ```
 
-```{tab-item} C# with .NETCore
+```{tab-item} C#
 //TODO
 ```
 ````
 
 ### Dispatch UseCase
 ````{tab-set}
-```{tab-item} Python with DJango
+```{tab-item} Python
 //TODO
 ```
 
-```{tab-item} Swift with OSCore
+```{tab-item} Swift
 //TODO
 ```
 
-```{tab-item} TypeScript with Vue
+```{tab-item} TypeScript
 //TODO
 ```
 
-```{tab-item} Kotlin with Jetpack
+```{tab-item} Kotlin
 //TODO
 ```
 
-```{tab-item} C# with .NETCore
+```{tab-item} C#
 //TODO
 ```
 ````
 
 ### Dispatch Chain UseCase
 ````{tab-set}
-```{tab-item} Python with DJango
+```{tab-item} Python
 //TODO
 ```
 
-```{tab-item} Swift with OSCore
+```{tab-item} Swift
 //TODO
 ```
 
-```{tab-item} TypeScript with Vue
+```{tab-item} TypeScript
 //TODO
 ```
 
-```{tab-item} Kotlin with Jetpack
+```{tab-item} Kotlin
 //TODO
 ```
 
-```{tab-item} C# with .NETCore
+```{tab-item} C#
 //TODO
 ```
 ````
 
 ### Dispatch Sequence UseCase
 ````{tab-set}
-```{tab-item} Python with DJango
+```{tab-item} Python
 //TODO
 ```
 
-```{tab-item} Swift with OSCore
+```{tab-item} Swift
 //TODO
 ```
 
-```{tab-item} TypeScript with Vue
+```{tab-item} TypeScript
 //TODO
 ```
 
-```{tab-item} Kotlin with Jetpack
+```{tab-item} Kotlin
 //TODO
 ```
 
-```{tab-item} C# with .NETCore
+```{tab-item} C#
 //TODO
 ```
 ````
