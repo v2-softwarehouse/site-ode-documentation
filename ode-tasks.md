@@ -1,11 +1,3 @@
----
-title: Getting UseCase<P, R>
-# tags: 
-#  - jekyll
-#  - github
-description: Produce robust UseCase<P, R> in a simple and enjoyable way.
----
-
 # Getting Started
 ODE concentrates a set of good development practices. Our role centers between the Business layer and the View layer.
 Abstracting, simplifying and standardizing works when invoking, saving and dispatching UseCase<P, R> to the view layer.
