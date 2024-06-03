@@ -2,4 +2,5 @@ jupyter-book
 matplotlib
 numpy
 sphinxcontrib-mermaid
+sphinx_inline_tabs
 ghp-import
