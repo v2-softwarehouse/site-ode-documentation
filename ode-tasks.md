@@ -38,6 +38,23 @@ Abstracting, simplifying and standardizing works when invoking, saving and dispa
 ```
 ````
 
+````{tab} Python
+  ```python
+  print("Hello World!")
+  ```
+  ````
+
+  ````{tab} C++
+  ```c++
+  #include <iostream>
+
+  int main() {
+    std::cout << "Hello World!" << std::endl;
+  }
+  ```
+  ````
+  `````
+
 ### Dispatch Chain UseCase
 ````{tab-set}
 ```{tab-item} Python

@@ -16,6 +16,7 @@ latex:
     targetname: book.tex
 
 
+
 # Information about where the book exists on the web
 repository:
   url: https://github.com/v2-softwarehouse/site-ode-documentation  # Online location of your book
@@ -31,3 +32,4 @@ html:
 sphinx:
   extra_extensions:
     - sphinxcontrib.mermaid
+    - sphinx_inline_tabs
