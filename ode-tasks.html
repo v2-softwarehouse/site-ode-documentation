@@ -403,17 +403,84 @@ Abstracting, simplifying and standardizing works when invoking, saving and dispa
 <section id="guard-of-usecase">
 <h3>Guard of UseCase<a class="headerlink" href="#guard-of-usecase" title="Permalink to this heading">#</a></h3>
 <div class="tab-set docutils">
-<input checked="True" class="tab-input" id="tab-set--0-input--1" name="tab-set--0" type="radio"><label class="tab-label" for="tab-set--0-input--1">Python</label><div class="tab-content docutils">
-<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">main</span><span class="p">():</span>
-    <span class="k">return</span>
+<input checked="True" class="tab-input" id="tab-set--3-input--1" name="tab-set--3" type="radio"><label class="tab-label" for="tab-set--3-input--1">Python</label><div class="tab-content docutils">
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">class</span> <span class="nc">GETAPIUseCase</span><span class="p">(</span><span class="n">UseCase</span><span class="p">[</span><span class="nb">int</span><span class="p">,</span> <span class="n">Any</span><span class="p">]):</span>
+  <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">repo</span><span class="p">:</span> <span class="n">UseCaseRepository</span><span class="p">):</span>
+      <span class="bp">self</span><span class="o">.</span><span class="n">repo</span> <span class="o">=</span> <span class="n">repo</span>
+
+  <span class="k">def</span> <span class="nf">execute</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">param</span><span class="p">:</span> <span class="nb">int</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">Output</span><span class="p">[</span><span class="n">Any</span><span class="p">]:</span>
+      <span class="n">fetch</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">repo</span><span class="o">.</span><span class="n">do_fetch</span><span class="p">(</span><span class="n">page</span><span class="o">=</span><span class="n">param</span><span class="p">)</span>
+      <span class="k">return</span> <span class="n">ValueOutput</span><span class="p">(</span><span class="n">fetch</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>
-<input class="tab-input" id="tab-set--0-input--2" name="tab-set--0" type="radio"><label class="tab-label" for="tab-set--0-input--2">C++</label><div class="tab-content docutils">
-<div class="highlight-c++ notranslate"><div class="highlight"><pre><span></span><span class="kt">int</span><span class="w"> </span><span class="nf">main</span><span class="p">(</span><span class="k">const</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">argc</span><span class="p">,</span><span class="w"> </span><span class="k">const</span><span class="w"> </span><span class="kt">char</span><span class="w"> </span><span class="o">**</span><span class="n">argv</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
-<span class="w">  </span><span class="k">return</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span>
+<input class="tab-input" id="tab-set--3-input--2" name="tab-set--3" type="radio"><label class="tab-label" for="tab-set--3-input--2">Swift</label><div class="tab-content docutils">
+<div class="highlight-swift notranslate"><div class="highlight"><pre><span></span><span class="kd">class</span> <span class="nc">GETUseCase</span> <span class="p">:</span> <span class="n">UseCase</span> <span class="p">{</span>
+<span class="kd">var</span> <span class="nv">repo</span><span class="p">:</span> <span class="n">UseCaseRepository</span>
+
+<span class="kd">init</span><span class="p">(</span><span class="n">repo</span><span class="p">:</span> <span class="n">UseCaseRepository</span><span class="p">)</span> <span class="p">{</span>
+    <span class="kc">self</span><span class="p">.</span><span class="n">repo</span> <span class="p">=</span> <span class="n">repo</span>
+<span class="p">}</span>
+
+<span class="kr">override</span> <span class="kd">func</span> <span class="nf">execute</span><span class="p">(</span><span class="n">param</span><span class="p">:</span> <span class="nb">String</span><span class="p">?)</span> <span class="p">-&gt;</span> <span class="n">Output</span> <span class="p">{</span>
+    <span class="kd">let</span> <span class="nv">fetch</span> <span class="p">=</span> <span class="n">repo</span><span class="p">.</span><span class="n">doFetch</span><span class="p">(</span><span class="n">name</span><span class="p">:</span> <span class="n">param</span><span class="p">)</span>
+    <span class="k">return</span> <span class="n">ValueOutput</span><span class="p">(</span><span class="n">value</span><span class="p">:</span> <span class="n">fetch</span><span class="p">)</span>
+<span class="p">}</span>
 <span class="p">}</span>
 </pre></div>
+</div>
+<div class="tab-set docutils">
+<input checked="True" class="tab-input" id="tab-set--2-input--1" name="tab-set--2" type="radio"><label class="tab-label" for="tab-set--2-input--1">Kotlin</label><div class="tab-content docutils">
+<div class="highlight-kotlin notranslate"><div class="highlight"><pre><span></span><span class="kd">class</span><span class="w"> </span><span class="nc">GETUseCase</span><span class="p">(</span><span class="kd">private</span><span class="w"> </span><span class="kd">val</span><span class="w"> </span><span class="nv">repo</span><span class="p">:</span><span class="w"> </span><span class="n">UseCaseRepository</span><span class="p">)</span><span class="w"> </span>
+<span class="p">:</span><span class="w"> </span><span class="n">UseCase</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
+
+<span class="kd">override</span><span class="w"> </span><span class="kd">fun</span><span class="w"> </span><span class="nf">execute</span><span class="p">(</span><span class="n">param</span><span class="p">:</span><span class="w"> </span><span class="kt">String?</span><span class="p">):</span><span class="w"> </span><span class="n">Output</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="kd">val</span><span class="w"> </span><span class="nv">fetch</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">repo</span><span class="p">.</span><span class="na">doFetch</span><span class="p">(</span><span class="n">param</span><span class="p">)</span>
+<span class="w">    </span><span class="k">return</span><span class="w"> </span><span class="n">ValueOutput</span><span class="p">(</span><span class="n">fetch</span><span class="p">)</span>
+<span class="p">}</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+<div class="tab-set docutils">
+<input checked="True" class="tab-input" id="tab-set--1-input--1" name="tab-set--1" type="radio"><label class="tab-label" for="tab-set--1-input--1">C#</label><div class="tab-content docutils">
+<div class="highlight-cshart notranslate"><div class="highlight"><pre><span></span>public class GETUseCase : UseCase
+{
+UseCaseRepository repo { get; set; }
+
+public UnitGET(UseCaseRepository repo) : base() {
+    this.repo = repo;
+}
+
+public override Output execute(string param)
+{
+    var fetch = repo.doFetch();
+    return new ValueOutput(fetch);
+}
+}
+</pre></div>
+</div>
+<div class="tab-set docutils">
+<input checked="True" class="tab-input" id="tab-set--0-input--1" name="tab-set--0" type="radio"><label class="tab-label" for="tab-set--0-input--1">TypeScript</label><div class="tab-content docutils">
+<div class="highlight-javascript notranslate"><div class="highlight"><pre><span></span><span class="kd">class</span><span class="w"> </span><span class="nx">GETUseCase</span><span class="w"> </span><span class="k">extends</span><span class="w"> </span><span class="nx">UseCase</span><span class="w"> </span><span class="p">{</span>
+<span class="w">  </span><span class="kr">private</span><span class="w"> </span><span class="nx">repo</span><span class="o">:</span><span class="w"> </span><span class="nx">UseCaseRepository</span><span class="p">;</span>
+
+<span class="w">  </span><span class="kr">constructor</span><span class="p">(</span><span class="nx">repo</span><span class="o">:</span><span class="w"> </span><span class="nx">UseCaseRepository</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">      </span><span class="k">super</span><span class="p">();</span>
+<span class="w">      </span><span class="k">this</span><span class="p">.</span><span class="nx">repo</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">repo</span><span class="p">;</span>
+<span class="w">  </span><span class="p">}</span>
+
+<span class="w">  </span><span class="nx">execute</span><span class="p">(</span><span class="nx">param</span><span class="o">:</span><span class="w"> </span><span class="nx">string</span><span class="w"> </span><span class="o">|</span><span class="w"> </span><span class="kc">null</span><span class="p">)</span><span class="o">:</span><span class="w"> </span><span class="nx">Output</span><span class="w"> </span><span class="p">{</span>
+<span class="w">      </span><span class="kd">const</span><span class="w"> </span><span class="nx">fetch</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">this</span><span class="p">.</span><span class="nx">repo</span><span class="p">.</span><span class="nx">doFetch</span><span class="p">(</span><span class="nx">param</span><span class="p">);</span>
+<span class="w">      </span><span class="k">return</span><span class="w"> </span><span class="ow">new</span><span class="w"> </span><span class="nx">ValueOutput</span><span class="p">(</span><span class="nx">fetch</span><span class="p">);</span>
+<span class="w">  </span><span class="p">}</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
 </div>
 </div>
 </div>
@@ -421,17 +488,84 @@ Abstracting, simplifying and standardizing works when invoking, saving and dispa
 <section id="dispatch-usecase">
 <h3>Dispatch UseCase<a class="headerlink" href="#dispatch-usecase" title="Permalink to this heading">#</a></h3>
 <div class="tab-set docutils">
-<input checked="True" class="tab-input" id="tab-set--1-input--1" name="tab-set--1" type="radio"><label class="tab-label" for="tab-set--1-input--1">Python</label><div class="tab-content docutils">
-<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">main</span><span class="p">():</span>
-    <span class="k">return</span>
+<input checked="True" class="tab-input" id="tab-set--7-input--1" name="tab-set--7" type="radio"><label class="tab-label" for="tab-set--7-input--1">Python</label><div class="tab-content docutils">
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">class</span> <span class="nc">GETAPIUseCase</span><span class="p">(</span><span class="n">UseCase</span><span class="p">[</span><span class="nb">int</span><span class="p">,</span> <span class="n">Any</span><span class="p">]):</span>
+  <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">repo</span><span class="p">:</span> <span class="n">UseCaseRepository</span><span class="p">):</span>
+      <span class="bp">self</span><span class="o">.</span><span class="n">repo</span> <span class="o">=</span> <span class="n">repo</span>
+
+  <span class="k">def</span> <span class="nf">execute</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">param</span><span class="p">:</span> <span class="nb">int</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">Output</span><span class="p">[</span><span class="n">Any</span><span class="p">]:</span>
+      <span class="n">fetch</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">repo</span><span class="o">.</span><span class="n">do_fetch</span><span class="p">(</span><span class="n">page</span><span class="o">=</span><span class="n">param</span><span class="p">)</span>
+      <span class="k">return</span> <span class="n">ValueOutput</span><span class="p">(</span><span class="n">fetch</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>
-<input class="tab-input" id="tab-set--1-input--2" name="tab-set--1" type="radio"><label class="tab-label" for="tab-set--1-input--2">C++</label><div class="tab-content docutils">
-<div class="highlight-c++ notranslate"><div class="highlight"><pre><span></span><span class="kt">int</span><span class="w"> </span><span class="nf">main</span><span class="p">(</span><span class="k">const</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">argc</span><span class="p">,</span><span class="w"> </span><span class="k">const</span><span class="w"> </span><span class="kt">char</span><span class="w"> </span><span class="o">**</span><span class="n">argv</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
-<span class="w">  </span><span class="k">return</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span>
+<input class="tab-input" id="tab-set--7-input--2" name="tab-set--7" type="radio"><label class="tab-label" for="tab-set--7-input--2">Swift</label><div class="tab-content docutils">
+<div class="highlight-swift notranslate"><div class="highlight"><pre><span></span><span class="kd">class</span> <span class="nc">GETUseCase</span> <span class="p">:</span> <span class="n">UseCase</span> <span class="p">{</span>
+<span class="kd">var</span> <span class="nv">repo</span><span class="p">:</span> <span class="n">UseCaseRepository</span>
+
+<span class="kd">init</span><span class="p">(</span><span class="n">repo</span><span class="p">:</span> <span class="n">UseCaseRepository</span><span class="p">)</span> <span class="p">{</span>
+    <span class="kc">self</span><span class="p">.</span><span class="n">repo</span> <span class="p">=</span> <span class="n">repo</span>
+<span class="p">}</span>
+
+<span class="kr">override</span> <span class="kd">func</span> <span class="nf">execute</span><span class="p">(</span><span class="n">param</span><span class="p">:</span> <span class="nb">String</span><span class="p">?)</span> <span class="p">-&gt;</span> <span class="n">Output</span> <span class="p">{</span>
+    <span class="kd">let</span> <span class="nv">fetch</span> <span class="p">=</span> <span class="n">repo</span><span class="p">.</span><span class="n">doFetch</span><span class="p">(</span><span class="n">name</span><span class="p">:</span> <span class="n">param</span><span class="p">)</span>
+    <span class="k">return</span> <span class="n">ValueOutput</span><span class="p">(</span><span class="n">value</span><span class="p">:</span> <span class="n">fetch</span><span class="p">)</span>
+<span class="p">}</span>
 <span class="p">}</span>
 </pre></div>
+</div>
+<div class="tab-set docutils">
+<input checked="True" class="tab-input" id="tab-set--6-input--1" name="tab-set--6" type="radio"><label class="tab-label" for="tab-set--6-input--1">Kotlin</label><div class="tab-content docutils">
+<div class="highlight-kotlin notranslate"><div class="highlight"><pre><span></span><span class="kd">class</span><span class="w"> </span><span class="nc">GETUseCase</span><span class="p">(</span><span class="kd">private</span><span class="w"> </span><span class="kd">val</span><span class="w"> </span><span class="nv">repo</span><span class="p">:</span><span class="w"> </span><span class="n">UseCaseRepository</span><span class="p">)</span><span class="w"> </span>
+<span class="p">:</span><span class="w"> </span><span class="n">UseCase</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
+
+<span class="kd">override</span><span class="w"> </span><span class="kd">fun</span><span class="w"> </span><span class="nf">execute</span><span class="p">(</span><span class="n">param</span><span class="p">:</span><span class="w"> </span><span class="kt">String?</span><span class="p">):</span><span class="w"> </span><span class="n">Output</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="kd">val</span><span class="w"> </span><span class="nv">fetch</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">repo</span><span class="p">.</span><span class="na">doFetch</span><span class="p">(</span><span class="n">param</span><span class="p">)</span>
+<span class="w">    </span><span class="k">return</span><span class="w"> </span><span class="n">ValueOutput</span><span class="p">(</span><span class="n">fetch</span><span class="p">)</span>
+<span class="p">}</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+<div class="tab-set docutils">
+<input checked="True" class="tab-input" id="tab-set--5-input--1" name="tab-set--5" type="radio"><label class="tab-label" for="tab-set--5-input--1">C#</label><div class="tab-content docutils">
+<div class="highlight-cshart notranslate"><div class="highlight"><pre><span></span>public class GETUseCase : UseCase
+{
+UseCaseRepository repo { get; set; }
+
+public UnitGET(UseCaseRepository repo) : base() {
+    this.repo = repo;
+}
+
+public override Output execute(string param)
+{
+    var fetch = repo.doFetch();
+    return new ValueOutput(fetch);
+}
+}
+</pre></div>
+</div>
+<div class="tab-set docutils">
+<input checked="True" class="tab-input" id="tab-set--4-input--1" name="tab-set--4" type="radio"><label class="tab-label" for="tab-set--4-input--1">TypeScript</label><div class="tab-content docutils">
+<div class="highlight-javascript notranslate"><div class="highlight"><pre><span></span><span class="kd">class</span><span class="w"> </span><span class="nx">GETUseCase</span><span class="w"> </span><span class="k">extends</span><span class="w"> </span><span class="nx">UseCase</span><span class="w"> </span><span class="p">{</span>
+<span class="w">  </span><span class="kr">private</span><span class="w"> </span><span class="nx">repo</span><span class="o">:</span><span class="w"> </span><span class="nx">UseCaseRepository</span><span class="p">;</span>
+
+<span class="w">  </span><span class="kr">constructor</span><span class="p">(</span><span class="nx">repo</span><span class="o">:</span><span class="w"> </span><span class="nx">UseCaseRepository</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">      </span><span class="k">super</span><span class="p">();</span>
+<span class="w">      </span><span class="k">this</span><span class="p">.</span><span class="nx">repo</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">repo</span><span class="p">;</span>
+<span class="w">  </span><span class="p">}</span>
+
+<span class="w">  </span><span class="nx">execute</span><span class="p">(</span><span class="nx">param</span><span class="o">:</span><span class="w"> </span><span class="nx">string</span><span class="w"> </span><span class="o">|</span><span class="w"> </span><span class="kc">null</span><span class="p">)</span><span class="o">:</span><span class="w"> </span><span class="nx">Output</span><span class="w"> </span><span class="p">{</span>
+<span class="w">      </span><span class="kd">const</span><span class="w"> </span><span class="nx">fetch</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">this</span><span class="p">.</span><span class="nx">repo</span><span class="p">.</span><span class="nx">doFetch</span><span class="p">(</span><span class="nx">param</span><span class="p">);</span>
+<span class="w">      </span><span class="k">return</span><span class="w"> </span><span class="ow">new</span><span class="w"> </span><span class="nx">ValueOutput</span><span class="p">(</span><span class="nx">fetch</span><span class="p">);</span>
+<span class="w">  </span><span class="p">}</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
 </div>
 </div>
 </div>
@@ -439,17 +573,84 @@ Abstracting, simplifying and standardizing works when invoking, saving and dispa
 <section id="dispatch-chain-usecase">
 <h3>Dispatch Chain UseCase<a class="headerlink" href="#dispatch-chain-usecase" title="Permalink to this heading">#</a></h3>
 <div class="tab-set docutils">
-<input checked="True" class="tab-input" id="tab-set--2-input--1" name="tab-set--2" type="radio"><label class="tab-label" for="tab-set--2-input--1">Python</label><div class="tab-content docutils">
-<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">main</span><span class="p">():</span>
-    <span class="k">return</span>
+<input checked="True" class="tab-input" id="tab-set--11-input--1" name="tab-set--11" type="radio"><label class="tab-label" for="tab-set--11-input--1">Python</label><div class="tab-content docutils">
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">class</span> <span class="nc">GETAPIUseCase</span><span class="p">(</span><span class="n">UseCase</span><span class="p">[</span><span class="nb">int</span><span class="p">,</span> <span class="n">Any</span><span class="p">]):</span>
+  <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">repo</span><span class="p">:</span> <span class="n">UseCaseRepository</span><span class="p">):</span>
+      <span class="bp">self</span><span class="o">.</span><span class="n">repo</span> <span class="o">=</span> <span class="n">repo</span>
+
+  <span class="k">def</span> <span class="nf">execute</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">param</span><span class="p">:</span> <span class="nb">int</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">Output</span><span class="p">[</span><span class="n">Any</span><span class="p">]:</span>
+      <span class="n">fetch</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">repo</span><span class="o">.</span><span class="n">do_fetch</span><span class="p">(</span><span class="n">page</span><span class="o">=</span><span class="n">param</span><span class="p">)</span>
+      <span class="k">return</span> <span class="n">ValueOutput</span><span class="p">(</span><span class="n">fetch</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>
-<input class="tab-input" id="tab-set--2-input--2" name="tab-set--2" type="radio"><label class="tab-label" for="tab-set--2-input--2">C++</label><div class="tab-content docutils">
-<div class="highlight-c++ notranslate"><div class="highlight"><pre><span></span><span class="kt">int</span><span class="w"> </span><span class="nf">main</span><span class="p">(</span><span class="k">const</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">argc</span><span class="p">,</span><span class="w"> </span><span class="k">const</span><span class="w"> </span><span class="kt">char</span><span class="w"> </span><span class="o">**</span><span class="n">argv</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
-<span class="w">  </span><span class="k">return</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span>
+<input class="tab-input" id="tab-set--11-input--2" name="tab-set--11" type="radio"><label class="tab-label" for="tab-set--11-input--2">Swift</label><div class="tab-content docutils">
+<div class="highlight-swift notranslate"><div class="highlight"><pre><span></span><span class="kd">class</span> <span class="nc">GETUseCase</span> <span class="p">:</span> <span class="n">UseCase</span> <span class="p">{</span>
+<span class="kd">var</span> <span class="nv">repo</span><span class="p">:</span> <span class="n">UseCaseRepository</span>
+
+<span class="kd">init</span><span class="p">(</span><span class="n">repo</span><span class="p">:</span> <span class="n">UseCaseRepository</span><span class="p">)</span> <span class="p">{</span>
+    <span class="kc">self</span><span class="p">.</span><span class="n">repo</span> <span class="p">=</span> <span class="n">repo</span>
+<span class="p">}</span>
+
+<span class="kr">override</span> <span class="kd">func</span> <span class="nf">execute</span><span class="p">(</span><span class="n">param</span><span class="p">:</span> <span class="nb">String</span><span class="p">?)</span> <span class="p">-&gt;</span> <span class="n">Output</span> <span class="p">{</span>
+    <span class="kd">let</span> <span class="nv">fetch</span> <span class="p">=</span> <span class="n">repo</span><span class="p">.</span><span class="n">doFetch</span><span class="p">(</span><span class="n">name</span><span class="p">:</span> <span class="n">param</span><span class="p">)</span>
+    <span class="k">return</span> <span class="n">ValueOutput</span><span class="p">(</span><span class="n">value</span><span class="p">:</span> <span class="n">fetch</span><span class="p">)</span>
+<span class="p">}</span>
 <span class="p">}</span>
 </pre></div>
+</div>
+<div class="tab-set docutils">
+<input checked="True" class="tab-input" id="tab-set--10-input--1" name="tab-set--10" type="radio"><label class="tab-label" for="tab-set--10-input--1">Kotlin</label><div class="tab-content docutils">
+<div class="highlight-kotlin notranslate"><div class="highlight"><pre><span></span><span class="kd">class</span><span class="w"> </span><span class="nc">GETUseCase</span><span class="p">(</span><span class="kd">private</span><span class="w"> </span><span class="kd">val</span><span class="w"> </span><span class="nv">repo</span><span class="p">:</span><span class="w"> </span><span class="n">UseCaseRepository</span><span class="p">)</span><span class="w"> </span>
+<span class="p">:</span><span class="w"> </span><span class="n">UseCase</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
+
+<span class="kd">override</span><span class="w"> </span><span class="kd">fun</span><span class="w"> </span><span class="nf">execute</span><span class="p">(</span><span class="n">param</span><span class="p">:</span><span class="w"> </span><span class="kt">String?</span><span class="p">):</span><span class="w"> </span><span class="n">Output</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="kd">val</span><span class="w"> </span><span class="nv">fetch</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">repo</span><span class="p">.</span><span class="na">doFetch</span><span class="p">(</span><span class="n">param</span><span class="p">)</span>
+<span class="w">    </span><span class="k">return</span><span class="w"> </span><span class="n">ValueOutput</span><span class="p">(</span><span class="n">fetch</span><span class="p">)</span>
+<span class="p">}</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+<div class="tab-set docutils">
+<input checked="True" class="tab-input" id="tab-set--9-input--1" name="tab-set--9" type="radio"><label class="tab-label" for="tab-set--9-input--1">C#</label><div class="tab-content docutils">
+<div class="highlight-cshart notranslate"><div class="highlight"><pre><span></span>public class GETUseCase : UseCase
+{
+UseCaseRepository repo { get; set; }
+
+public UnitGET(UseCaseRepository repo) : base() {
+    this.repo = repo;
+}
+
+public override Output execute(string param)
+{
+    var fetch = repo.doFetch();
+    return new ValueOutput(fetch);
+}
+}
+</pre></div>
+</div>
+<div class="tab-set docutils">
+<input checked="True" class="tab-input" id="tab-set--8-input--1" name="tab-set--8" type="radio"><label class="tab-label" for="tab-set--8-input--1">TypeScript</label><div class="tab-content docutils">
+<div class="highlight-javascript notranslate"><div class="highlight"><pre><span></span><span class="kd">class</span><span class="w"> </span><span class="nx">GETUseCase</span><span class="w"> </span><span class="k">extends</span><span class="w"> </span><span class="nx">UseCase</span><span class="w"> </span><span class="p">{</span>
+<span class="w">  </span><span class="kr">private</span><span class="w"> </span><span class="nx">repo</span><span class="o">:</span><span class="w"> </span><span class="nx">UseCaseRepository</span><span class="p">;</span>
+
+<span class="w">  </span><span class="kr">constructor</span><span class="p">(</span><span class="nx">repo</span><span class="o">:</span><span class="w"> </span><span class="nx">UseCaseRepository</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">      </span><span class="k">super</span><span class="p">();</span>
+<span class="w">      </span><span class="k">this</span><span class="p">.</span><span class="nx">repo</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">repo</span><span class="p">;</span>
+<span class="w">  </span><span class="p">}</span>
+
+<span class="w">  </span><span class="nx">execute</span><span class="p">(</span><span class="nx">param</span><span class="o">:</span><span class="w"> </span><span class="nx">string</span><span class="w"> </span><span class="o">|</span><span class="w"> </span><span class="kc">null</span><span class="p">)</span><span class="o">:</span><span class="w"> </span><span class="nx">Output</span><span class="w"> </span><span class="p">{</span>
+<span class="w">      </span><span class="kd">const</span><span class="w"> </span><span class="nx">fetch</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">this</span><span class="p">.</span><span class="nx">repo</span><span class="p">.</span><span class="nx">doFetch</span><span class="p">(</span><span class="nx">param</span><span class="p">);</span>
+<span class="w">      </span><span class="k">return</span><span class="w"> </span><span class="ow">new</span><span class="w"> </span><span class="nx">ValueOutput</span><span class="p">(</span><span class="nx">fetch</span><span class="p">);</span>
+<span class="w">  </span><span class="p">}</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
 </div>
 </div>
 </div>
@@ -457,17 +658,84 @@ Abstracting, simplifying and standardizing works when invoking, saving and dispa
 <section id="dispatch-sequence-usecase">
 <h3>Dispatch Sequence UseCase<a class="headerlink" href="#dispatch-sequence-usecase" title="Permalink to this heading">#</a></h3>
 <div class="tab-set docutils">
-<input checked="True" class="tab-input" id="tab-set--3-input--1" name="tab-set--3" type="radio"><label class="tab-label" for="tab-set--3-input--1">Python</label><div class="tab-content docutils">
-<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">main</span><span class="p">():</span>
-    <span class="k">return</span>
+<input checked="True" class="tab-input" id="tab-set--15-input--1" name="tab-set--15" type="radio"><label class="tab-label" for="tab-set--15-input--1">Python</label><div class="tab-content docutils">
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">class</span> <span class="nc">GETAPIUseCase</span><span class="p">(</span><span class="n">UseCase</span><span class="p">[</span><span class="nb">int</span><span class="p">,</span> <span class="n">Any</span><span class="p">]):</span>
+  <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">repo</span><span class="p">:</span> <span class="n">UseCaseRepository</span><span class="p">):</span>
+      <span class="bp">self</span><span class="o">.</span><span class="n">repo</span> <span class="o">=</span> <span class="n">repo</span>
+
+  <span class="k">def</span> <span class="nf">execute</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">param</span><span class="p">:</span> <span class="nb">int</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">Output</span><span class="p">[</span><span class="n">Any</span><span class="p">]:</span>
+      <span class="n">fetch</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">repo</span><span class="o">.</span><span class="n">do_fetch</span><span class="p">(</span><span class="n">page</span><span class="o">=</span><span class="n">param</span><span class="p">)</span>
+      <span class="k">return</span> <span class="n">ValueOutput</span><span class="p">(</span><span class="n">fetch</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>
-<input class="tab-input" id="tab-set--3-input--2" name="tab-set--3" type="radio"><label class="tab-label" for="tab-set--3-input--2">C++</label><div class="tab-content docutils">
-<div class="highlight-c++ notranslate"><div class="highlight"><pre><span></span><span class="kt">int</span><span class="w"> </span><span class="nf">main</span><span class="p">(</span><span class="k">const</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">argc</span><span class="p">,</span><span class="w"> </span><span class="k">const</span><span class="w"> </span><span class="kt">char</span><span class="w"> </span><span class="o">**</span><span class="n">argv</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
-<span class="w">  </span><span class="k">return</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span>
+<input class="tab-input" id="tab-set--15-input--2" name="tab-set--15" type="radio"><label class="tab-label" for="tab-set--15-input--2">Swift</label><div class="tab-content docutils">
+<div class="highlight-swift notranslate"><div class="highlight"><pre><span></span><span class="kd">class</span> <span class="nc">GETUseCase</span> <span class="p">:</span> <span class="n">UseCase</span> <span class="p">{</span>
+<span class="kd">var</span> <span class="nv">repo</span><span class="p">:</span> <span class="n">UseCaseRepository</span>
+
+<span class="kd">init</span><span class="p">(</span><span class="n">repo</span><span class="p">:</span> <span class="n">UseCaseRepository</span><span class="p">)</span> <span class="p">{</span>
+    <span class="kc">self</span><span class="p">.</span><span class="n">repo</span> <span class="p">=</span> <span class="n">repo</span>
+<span class="p">}</span>
+
+<span class="kr">override</span> <span class="kd">func</span> <span class="nf">execute</span><span class="p">(</span><span class="n">param</span><span class="p">:</span> <span class="nb">String</span><span class="p">?)</span> <span class="p">-&gt;</span> <span class="n">Output</span> <span class="p">{</span>
+    <span class="kd">let</span> <span class="nv">fetch</span> <span class="p">=</span> <span class="n">repo</span><span class="p">.</span><span class="n">doFetch</span><span class="p">(</span><span class="n">name</span><span class="p">:</span> <span class="n">param</span><span class="p">)</span>
+    <span class="k">return</span> <span class="n">ValueOutput</span><span class="p">(</span><span class="n">value</span><span class="p">:</span> <span class="n">fetch</span><span class="p">)</span>
+<span class="p">}</span>
 <span class="p">}</span>
 </pre></div>
+</div>
+<div class="tab-set docutils">
+<input checked="True" class="tab-input" id="tab-set--14-input--1" name="tab-set--14" type="radio"><label class="tab-label" for="tab-set--14-input--1">Kotlin</label><div class="tab-content docutils">
+<div class="highlight-kotlin notranslate"><div class="highlight"><pre><span></span><span class="kd">class</span><span class="w"> </span><span class="nc">GETUseCase</span><span class="p">(</span><span class="kd">private</span><span class="w"> </span><span class="kd">val</span><span class="w"> </span><span class="nv">repo</span><span class="p">:</span><span class="w"> </span><span class="n">UseCaseRepository</span><span class="p">)</span><span class="w"> </span>
+<span class="p">:</span><span class="w"> </span><span class="n">UseCase</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
+
+<span class="kd">override</span><span class="w"> </span><span class="kd">fun</span><span class="w"> </span><span class="nf">execute</span><span class="p">(</span><span class="n">param</span><span class="p">:</span><span class="w"> </span><span class="kt">String?</span><span class="p">):</span><span class="w"> </span><span class="n">Output</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="kd">val</span><span class="w"> </span><span class="nv">fetch</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">repo</span><span class="p">.</span><span class="na">doFetch</span><span class="p">(</span><span class="n">param</span><span class="p">)</span>
+<span class="w">    </span><span class="k">return</span><span class="w"> </span><span class="n">ValueOutput</span><span class="p">(</span><span class="n">fetch</span><span class="p">)</span>
+<span class="p">}</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+<div class="tab-set docutils">
+<input checked="True" class="tab-input" id="tab-set--13-input--1" name="tab-set--13" type="radio"><label class="tab-label" for="tab-set--13-input--1">C#</label><div class="tab-content docutils">
+<div class="highlight-cshart notranslate"><div class="highlight"><pre><span></span>public class GETUseCase : UseCase
+{
+UseCaseRepository repo { get; set; }
+
+public UnitGET(UseCaseRepository repo) : base() {
+    this.repo = repo;
+}
+
+public override Output execute(string param)
+{
+    var fetch = repo.doFetch();
+    return new ValueOutput(fetch);
+}
+}
+</pre></div>
+</div>
+<div class="tab-set docutils">
+<input checked="True" class="tab-input" id="tab-set--12-input--1" name="tab-set--12" type="radio"><label class="tab-label" for="tab-set--12-input--1">TypeScript</label><div class="tab-content docutils">
+<div class="highlight-javascript notranslate"><div class="highlight"><pre><span></span><span class="kd">class</span><span class="w"> </span><span class="nx">GETUseCase</span><span class="w"> </span><span class="k">extends</span><span class="w"> </span><span class="nx">UseCase</span><span class="w"> </span><span class="p">{</span>
+<span class="w">  </span><span class="kr">private</span><span class="w"> </span><span class="nx">repo</span><span class="o">:</span><span class="w"> </span><span class="nx">UseCaseRepository</span><span class="p">;</span>
+
+<span class="w">  </span><span class="kr">constructor</span><span class="p">(</span><span class="nx">repo</span><span class="o">:</span><span class="w"> </span><span class="nx">UseCaseRepository</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">      </span><span class="k">super</span><span class="p">();</span>
+<span class="w">      </span><span class="k">this</span><span class="p">.</span><span class="nx">repo</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">repo</span><span class="p">;</span>
+<span class="w">  </span><span class="p">}</span>
+
+<span class="w">  </span><span class="nx">execute</span><span class="p">(</span><span class="nx">param</span><span class="o">:</span><span class="w"> </span><span class="nx">string</span><span class="w"> </span><span class="o">|</span><span class="w"> </span><span class="kc">null</span><span class="p">)</span><span class="o">:</span><span class="w"> </span><span class="nx">Output</span><span class="w"> </span><span class="p">{</span>
+<span class="w">      </span><span class="kd">const</span><span class="w"> </span><span class="nx">fetch</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">this</span><span class="p">.</span><span class="nx">repo</span><span class="p">.</span><span class="nx">doFetch</span><span class="p">(</span><span class="nx">param</span><span class="p">);</span>
+<span class="w">      </span><span class="k">return</span><span class="w"> </span><span class="ow">new</span><span class="w"> </span><span class="nx">ValueOutput</span><span class="p">(</span><span class="nx">fetch</span><span class="p">);</span>
+<span class="w">  </span><span class="p">}</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
 </div>
 </div>
 </div>
