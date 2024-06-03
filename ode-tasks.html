@@ -372,7 +372,7 @@ document.write(`
                 <ul class="visible nav section-nav flex-column">
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#features">Features</a><ul class="nav section-nav flex-column">
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#guard-of-usecase">Guard of UseCase</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#dispatch-usecase">Dispatch UseCase</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#dispatch-sequence-usecase">Dispatch Sequence UseCase</a></li>
 </ul>
 </li>
 </ul>
@@ -400,43 +400,6 @@ Abstracting, simplifying and standardizing works when invoking, saving and dispa
 </ul>
 <section id="guard-of-usecase">
 <h3>Guard of UseCase<a class="headerlink" href="#guard-of-usecase" title="Permalink to this heading">#</a></h3>
-<div class="sd-tab-set docutils">
-<input checked="checked" id="sd-tab-item-0" name="sd-tab-set-0" type="radio">
-</input><label class="sd-tab-label" for="sd-tab-item-0">
-Python</label><div class="sd-tab-content docutils">
-<p>//TODO</p>
-</div>
-<input id="sd-tab-item-1" name="sd-tab-set-0" type="radio">
-</input><label class="sd-tab-label" for="sd-tab-item-1">
-Swift</label><div class="sd-tab-content docutils">
-<p>//TODO</p>
-</div>
-<input id="sd-tab-item-2" name="sd-tab-set-0" type="radio">
-</input><label class="sd-tab-label" for="sd-tab-item-2">
-TypeScript</label><div class="sd-tab-content docutils">
-<p>//TODO</p>
-</div>
-<input id="sd-tab-item-3" name="sd-tab-set-0" type="radio">
-</input><label class="sd-tab-label" for="sd-tab-item-3">
-Kotlin</label><div class="sd-tab-content docutils">
-<p>//TODO</p>
-</div>
-<input id="sd-tab-item-4" name="sd-tab-set-0" type="radio">
-</input><label class="sd-tab-label" for="sd-tab-item-4">
-C#</label><div class="sd-tab-content docutils">
-<p>//TODO</p>
-</div>
-</div>
-</section>
-<section id="dispatch-usecase">
-<h3>Dispatch UseCase<a class="headerlink" href="#dispatch-usecase" title="Permalink to this heading">#</a></h3>
-<div class="sd-tab-set docutils">
-<input checked="checked" id="sd-tab-item-5" name="sd-tab-set-1" type="radio">
-</input><label class="sd-tab-label" for="sd-tab-item-5">
-Python</label><div class="sd-tab-content docutils">
-<p><code class="docutils literal notranslate"><span class="pre">some</span> <span class="pre">Python</span> <span class="pre">code</span></code></p>
-</div>
-</div>
 <div class="tab-set docutils">
 <input checked="True" class="tab-input" id="tab-set--0-input--1" name="tab-set--0" type="radio"><label class="tab-label" for="tab-set--0-input--1">Python</label><div class="tab-content docutils">
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Hello World!&quot;</span><span class="p">)</span>
@@ -454,51 +417,63 @@ Python</label><div class="sd-tab-content docutils">
 </div>
 </div>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span>
+### Dispatch UseCase
+````{tab} Python
+  ```python
+  print(&quot;Hello World!&quot;)
+  ```
+</pre></div>
+</div>
+<div class="tab-set docutils">
+<input checked="True" class="tab-input" id="tab-set--1-input--1" name="tab-set--1" type="radio"><label class="tab-label" for="tab-set--1-input--1">C++</label><div class="tab-content docutils">
+<div class="highlight-c++ notranslate"><div class="highlight"><pre><span></span><span class="cp">#include</span><span class="w"> </span><span class="cpf">&lt;iostream&gt;</span>
+
+<span class="kt">int</span><span class="w"> </span><span class="nf">main</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
+<span class="w">  </span><span class="n">std</span><span class="o">::</span><span class="n">cout</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="s">&quot;Hello World!&quot;</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="n">std</span><span class="o">::</span><span class="n">endl</span><span class="p">;</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>
 ### Dispatch Chain UseCase
-````{tab-set}
-```{tab-item} Python
-//TODO
-```
+````{tab} Python
+  ```python
+  print(&quot;Hello World!&quot;)
+  ```
+  ````
 
-```{tab-item} Swift
-//TODO
-```
+  ````{tab} C++
+  ```c++
+  #include &lt;iostream&gt;
 
-```{tab-item} TypeScript
-//TODO
-```
+  int main() {
+    std::cout &lt;&lt; &quot;Hello World!&quot; &lt;&lt; std::endl;
+  }
+  ```
+  ````
+</pre></div>
+</div>
+</section>
+<section id="dispatch-sequence-usecase">
+<h3>Dispatch Sequence UseCase<a class="headerlink" href="#dispatch-sequence-usecase" title="Permalink to this heading">#</a></h3>
+<div class="tab-set docutils">
+<input checked="True" class="tab-input" id="tab-set--2-input--1" name="tab-set--2" type="radio"><label class="tab-label" for="tab-set--2-input--1">Python</label><div class="tab-content docutils">
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Hello World!&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<input class="tab-input" id="tab-set--2-input--2" name="tab-set--2" type="radio"><label class="tab-label" for="tab-set--2-input--2">C++</label><div class="tab-content docutils">
+<div class="highlight-c++ notranslate"><div class="highlight"><pre><span></span><span class="cp">#include</span><span class="w"> </span><span class="cpf">&lt;iostream&gt;</span>
 
-```{tab-item} Kotlin
-//TODO
-```
-
-```{tab-item} C#
-//TODO
-```
-````
-
-### Dispatch Sequence UseCase
-````{tab-set}
-```{tab-item} Python
-//TODO
-```
-
-```{tab-item} Swift
-//TODO
-```
-
-```{tab-item} TypeScript
-//TODO
-```
-
-```{tab-item} Kotlin
-//TODO
-```
-
-```{tab-item} C#
-//TODO
-```
-````
+<span class="kt">int</span><span class="w"> </span><span class="nf">main</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
+<span class="w">  </span><span class="n">std</span><span class="o">::</span><span class="n">cout</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="s">&quot;Hello World!&quot;</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="n">std</span><span class="o">::</span><span class="n">endl</span><span class="p">;</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>
 </pre></div>
 </div>
 </section>
@@ -561,7 +536,7 @@ Python</label><div class="sd-tab-content docutils">
     <ul class="visible nav section-nav flex-column">
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#features">Features</a><ul class="nav section-nav flex-column">
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#guard-of-usecase">Guard of UseCase</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#dispatch-usecase">Dispatch UseCase</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#dispatch-sequence-usecase">Dispatch Sequence UseCase</a></li>
 </ul>
 </li>
 </ul>
