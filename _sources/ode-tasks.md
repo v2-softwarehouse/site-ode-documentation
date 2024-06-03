@@ -9,7 +9,7 @@ Abstracting, simplifying and standardizing works when invoking, saving and dispa
 - **Dispatch Sequence UseCase**: Dispatch a list of UseCase<P, R> that are independent of each other.
 
 ### Guard of UseCase
-````{tab} Python
+`````{tab} Python
   ```python
   print("Hello World!")
   ```
@@ -24,10 +24,10 @@ Abstracting, simplifying and standardizing works when invoking, saving and dispa
   }
   ```
   ````
-````
+`````
 
 ### Dispatch UseCase
-````{tab} Python
+`````{tab} Python
   ```python
   print("Hello World!")
   ```
@@ -45,7 +45,7 @@ Abstracting, simplifying and standardizing works when invoking, saving and dispa
 `````
 
 ### Dispatch Chain UseCase
-````{tab} Python
+`````{tab} Python
   ```python
   print("Hello World!")
   ```
@@ -59,11 +59,10 @@ Abstracting, simplifying and standardizing works when invoking, saving and dispa
     std::cout << "Hello World!" << std::endl;
   }
   ```
-  ````
 `````
 
 ### Dispatch Sequence UseCase
-````{tab} Python
+`````{tab} Python
   ```python
   print("Hello World!")
   ```
